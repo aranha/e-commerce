@@ -3,23 +3,23 @@ package Model;
 import java.util.ArrayList;
 
 public class Carrinho {
-	private int idCarrinho;
+	private int idCliente;
 	private ArrayList<Produtos> produtos;
 	
 	public Carrinho() {
 	
 	}
-	public int getIdCarrinho() {
-		return idCarrinho;
+	public int getIdCliente() {
+		return idCliente;
 	}
-	public void setIdCarrinho(int idCarrinho) {
-		this.idCarrinho = idCarrinho;
+	public void addIdCliente(int number) {
+		this.idCliente = number;
 	}
 	public ArrayList<Produtos> getProdutos() {
 		return produtos;
 	}
-	public void setProdutos(ArrayList<Produtos> produtos) {
-		this.produtos = produtos;
+	public void addProduto(Produtos produto) {
+		produtos.add(produto);
 	}
 
 	

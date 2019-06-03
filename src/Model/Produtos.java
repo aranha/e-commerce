@@ -25,4 +25,11 @@ public class Produtos {
 	public void setNomeProduto(String nomeProduto) {
 		this.nomeProduto = nomeProduto;
 	}
+	
+	public void setPreco (double preco) {
+		this.preco = preco;
+	}
+	public double getPrecoProduto () {
+		return preco;
+	}
 }
