@@ -2,25 +2,28 @@ package Model;
 
 import java.util.ArrayList;
 
-public class Carrinho {
-	private int idCliente;
+public final class Carrinho {
+
 	private ArrayList<Produtos> produtos;
-	
-	public Carrinho() {
-	
+	private static Carrinho unico = null;
+
+	private Carrinho() {
 	}
-	public int getIdCliente() {
-		return idCliente;
+
+	public static synchronized Carrinho getInstance() {
+		if (unico == null)
+			unico = new Carrinho();
+
+		return unico;
 	}
-	public void addIdCliente(int number) {
-		this.idCliente = number;
-	}
+
+
 	public ArrayList<Produtos> getProdutos() {
 		return produtos;
 	}
+
 	public void addProduto(Produtos produto) {
 		produtos.add(produto);
 	}
 
-	
 }
